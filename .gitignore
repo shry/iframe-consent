@@ -1,0 +1,9 @@
+/node_modules/
+/lib/
+/test/
+custom-elements.json
+# top level source
+iframe-consent.js
+iframe-consent.js.map
+iframe-consent.d.ts
+iframe-consent.d.ts.map
