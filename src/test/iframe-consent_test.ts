@@ -56,7 +56,7 @@ suite('iframe-consent', () => {
       el,
       `
       <div id="wrapper" class="wrapper-iframe" style="width:560px;height:315px;">
-        <iframe allow="" src="https://www.youtube-nocookie.com/embed/I5e6ftNpGsU" width="560" title="" height="315"></iframe>        
+        <iframe src="https://www.youtube-nocookie.com/embed/I5e6ftNpGsU" width="560" title="" height="315"></iframe>        
       </div>
     `
     );

@@ -11,11 +11,22 @@ const icons = {
 }
 
 /**
- * A Webcomponent which asks for consent from user.
+ * A web component GDPR conform drop-in replacement for the html iframe tag.
  *
- * @fires count-changed - Indicates when the count changes
- * @slot - This element has a slot
- * @csspart button - The button
+ * @slot This element has a slot
+ * @cssprop --iframe-consent-wrapper-bg - Background color of wrapper
+ * @cssprop --iframe-consent-wrapper-border - Border of wrapper
+ * @cssprop --iframe-consent-wrapper-radius - Border radius of wrapper
+ * @cssprop --iframe-consent-wrapper-iframe-border - The actual iframe border 
+ * @cssprop --iframe-consent-btn-border - Button border
+ * @cssprop --iframe-consent-btn-color - Button color
+ * @cssprop --iframe-consent-btn-bg - Button background
+ * @cssprop --iframe-consent-btn-radius - Button radius
+ * @cssprop --iframe-consent-btn-padding - Button padding
+ * @cssprop --iframe-consent-btn-font-weight - Button font weight
+ * @cssprop --iframe-consent-btn-font-family - Button font family
+ * @cssprop --iframe-consent-poster-opacity - Poster image opacity
+ * @cssprop --iframe-consent-icon-color - Icon color
  */
 @customElement('iframe-consent')
 export class IframeConsent extends LitElement {
@@ -118,6 +129,7 @@ export class IframeConsent extends LitElement {
     }
   `;
 
+  /*
   override connectedCallback() {
     super.connectedCallback();
     //ro.observe(this);
@@ -130,21 +142,25 @@ export class IframeConsent extends LitElement {
     
     super.disconnectedCallback();
   }
+  */
 
   /**
    * The iframe src.
+   * @attr
    */
   @property({type: String})
   src = '';
 
   /**
    * The iframe title.
+   * @attr
    */
   @property({type: String})
   override title = '';
 
   /**
    * The iframe width.
+   * @attr
    */
   @property()
   width?:number;
@@ -152,30 +168,49 @@ export class IframeConsent extends LitElement {
 
   /**
    * The iframe width.
+   * @attr
    */
   @property()
   height?:number;
 
   /**
+   * The iframe name.
+   * @attr
+   */
+  @property()
+  name?:string;
+
+  /**
+   * The iframe referrerpolicy.
+   * @attr
+   */
+  @property()
+  referrerpolicy?:string;
+  
+  /**
    * iframe attribute
+   * @attr
    */
   @property({type: Boolean})
   allowfullscreen = false;
 
   /**
    * iframe attribute
+   * @attr
    */
-  @property({type: String})
-  allow = '';
+  @property()
+  allow?:string;
 
   /**
    * The Button accept text.
+   * @attr
    */
   @property({type: String})
   accept = 'Accept';
 
   /**
    * Should the iframe be responsive
+   * @attr
    */
   @property({type: Boolean})
   responsive = false;
@@ -183,12 +218,15 @@ export class IframeConsent extends LitElement {
   /**
    * Shows an icon (video, map etc.) 
    * Select 'auto' to automatically select the icon based on the url
+   * @attr
+   * @type {"auto" | "video" | "map" | "default"}
    */
   @property()
   icon?: IconType;
 
   /**
    * Provide an image source which will overlay the container 
+   * @attr
    */
   @property({type: String})
   poster = '';
@@ -226,6 +264,7 @@ export class IframeConsent extends LitElement {
    * @param shadowRoot 
    * @returns 
    */
+  /*
   private _handleResize(shadowRoot?: Element["shadowRoot"]) {
     if(this.responsive !== true){
       return;
@@ -240,7 +279,7 @@ export class IframeConsent extends LitElement {
       this.height = width / ratio;
     }
     
-  }
+  }*/
 
   private _getIcon(className:string ): TemplateResult<1> | undefined{
     let icon = icons['default'];
@@ -284,7 +323,7 @@ export class IframeConsent extends LitElement {
     if(this.consent){
       return html`
         <div id="wrapper" class="wrapper-iframe" style=${styleMap(this._getStyle())}>
-          <iframe title=${ifDefined(this.title)} src=${this.src} width=${ifDefined(this.width)} height=${ifDefined(this.height)} allow=${ifDefined(this.allow)} ?allowfullscreen=${this.allowfullscreen}></iframe>        
+          <iframe title=${ifDefined(this.title)} name=${ifDefined(this.name)} src=${this.src} width=${ifDefined(this.width)} height=${ifDefined(this.height)} allow=${ifDefined(this.allow)} referrerpolicy=${ifDefined(this.referrerpolicy)} ?allowfullscreen=${this.allowfullscreen}></iframe>        
         </div>
       `;
     }
