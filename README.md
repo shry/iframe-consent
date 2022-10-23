@@ -30,6 +30,7 @@ In addition iframe-consent has some useful exta attributes:
 | Attribute 	                         | Function  		                                    |
 |---	                                 |---		                                            |
 | responsive  	                         | Add this attr and the iframe will keep the dimension based on the width and height |
+| accept="Accept button text"  	         | Default is "Accept"	                                |
 | icon="auto,video,map,default"  	     | Shows an icon on top of the  consent message 	    |
 | poster="../src/to/img.jpg"  	         | Provide a background image for the iframe wrapper 	|
 
@@ -51,7 +52,6 @@ You can change the style of the iframe-consent with CSS variables:
 | --iframe-consent-btn-font-weight       | -                    |
 | --iframe-consent-btn-font-family       | -                    |
 | --iframe-consent-poster-opacity        | 0.2                  |
-| --iframe-consent-icon-color            | -                    |
 | --iframe-consent-icon-color            | -                    |
 | --iframe-consent-wrapper-mobile-bg     | white                |
 
