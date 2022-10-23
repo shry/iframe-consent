@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iframe-consent</title>
+    <meta name="description" content="GDPR conform drop-in replacement for the html iframe tag.">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/gh/shry/iframe-consent/build/iframe-consent.bundled.js"></script>
 
@@ -26,6 +28,7 @@
             padding: 15px;
         }
         :root {
+            --iframe-consent-wrapper-radius:var(--bs-border-radius);
             --iframe-consent-btn-bg:var(--bs-primary);
             --iframe-consent-btn-border:1px solid var(--bs-primary);
             --iframe-consent-btn-radius:var(--bs-border-radius);
@@ -37,19 +40,19 @@
   <body>
     
         
-    <main class="w-100 m-auto">
-        <h3 class="text-center">Example:</h3>
-        <h1 class="text-center mb-4">&lt;iframe-consent /&gt;</h1>
+    <main class="w-100 m-auto text-center ">
+        <h1 class="mb-4">&lt;iframe-consent /&gt;</h1>
+        <p class="lead">iframe-consent is GDPR conform drop-in replacement for the HTML &lt;iframe /&gt; tag.</p>
+        <h3>Example:</h3>
 
 
-        <div class="card text-bg-dark mb-4">
-            <div class="card-body">
+        <div class="card text-bg-dark my-4">
+            <div class="card-body  text-start">
                 <code class="text-white">
                     &lt;iframe-consent responsive icon="auto" width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;<br />
-                    &lt;p&gt;Provide a privacy text for the user&lt;/p&gt;<br />
-                    &lt;p&gt;&lt;a href="#"&gt;Link to privacy policy&lt;/a&gt;&lt;/p&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&lt;p&gt;Provide a privacy text for the user&lt;/p&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&lt;p&gt;&lt;a href="#"&gt;Link to privacy policy&lt;/a&gt;&lt;/p&gt;<br />
                         &lt;/iframe-consent&gt;
-                    
                 </code>
             </div>
           </div>
@@ -60,6 +63,15 @@
             <p>Provide a privacy text for the user</p>
             <p><a href="#">Link to privacy policy</a></p>
         </iframe-consent>
+
+        <div class="mt-5">
+            <a href="https://github.com/shry/iframe-consent" class="btn btn-link text-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                  </svg>
+            </a>
+        </div>
+
     </main>
 
 

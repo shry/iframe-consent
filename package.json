@@ -33,7 +33,7 @@
     "lit"
   ],
   "author": "shry",
-  "license": "",
+  "license": "BSD 3-Clause",
   "dependencies": {
     "lit": "^2.4.0"
   },

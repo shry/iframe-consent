@@ -8,17 +8,17 @@ In situations where you have to comply with strict data protection requirements 
 
 Make sure to include the `iframe-consent.bundled.js` in the head of your html file.
 
-A normal iframe from youtube looks like this:
+A basic iframe embedded video from YouTube looks like this:
 
 ```html
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
-Just replace `iframe` with `iframe-consent` and provide some additional privacy policy text.
+Just replace `iframe` with `iframe-consent` and provide some additional privacy policy message.
 
 ```html
 <iframe-consent responsive icon="auto" width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    <p>Provide a privacy text for the user</p>
+    <p>Provide a message for the user</p>
     <p><a href="#">Link to privacy policy</a></p>
 </iframe-consent>
 ```
@@ -27,7 +27,7 @@ Just replace `iframe` with `iframe-consent` and provide some additional privacy 
 
 In addition iframe-consent has some useful exta attributes:
 
-| Attribute 	                         | Function  		                                    |
+| Attribute 	                         | Description  		                                |
 |---	                                 |---		                                            |
 | responsive  	                         | Add this attr and the iframe will keep the dimension based on the width and height |
 | accept="Accept button text"  	         | Default is "Accept"	                                |
