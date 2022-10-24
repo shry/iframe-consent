@@ -25,6 +25,7 @@ const icons = {
  * @cssprop --iframe-consent-btn-padding - Button padding
  * @cssprop --iframe-consent-btn-font-weight - Button font weight
  * @cssprop --iframe-consent-btn-font-family - Button font family
+ * @cssprop --iframe-consent-btn-font-size - Button font size
  * @cssprop --iframe-consent-poster-opacity - Poster image opacity
  * @cssprop --iframe-consent-icon-color - Icon color
  */
@@ -90,6 +91,7 @@ export class IframeConsent extends LitElement {
       padding:var(--iframe-consent-btn-padding, 0.75rem 2rem);
       font-weight:var(--iframe-consent-btn-font-weight);      
       font-family:var(--iframe-consent-btn-font-family);
+      font-size:var(--iframe-consent-btn-font-size, 1rem);
     }
 
     img.poster {

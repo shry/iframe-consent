@@ -51,16 +51,18 @@ You can change the style of the iframe-consent with CSS variables:
 | --iframe-consent-btn-padding           | 0.75rem 2rem         |
 | --iframe-consent-btn-font-weight       | -                    |
 | --iframe-consent-btn-font-family       | -                    |
+| --iframe-consent-btn-font-size         | 1rem                 |
 | --iframe-consent-poster-opacity        | 0.2                  |
 | --iframe-consent-icon-color            | -                    |
 | --iframe-consent-wrapper-mobile-bg     | white                |
 
 ### Bootstrap
 
-If you are using Bootstrap you can quickly adapt some basic styling by using bootstrap variables:
+If you are using Bootstrap v5 you can quickly adapt some basic styling by using bootstrap variables:
 
 ```css
 :root {
+    --iframe-consent-wrapper-radius:var(--bs-border-radius);
     --iframe-consent-btn-bg:var(--bs-primary);
     --iframe-consent-btn-border:1px solid var(--bs-primary);
     --iframe-consent-btn-radius:var(--bs-border-radius);

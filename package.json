@@ -6,6 +6,7 @@
   "main": "iframe-consent.js",
   "module": "iframe-consent.js",
   "type": "module",
+  "types": "iframe-consent.d.ts",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",

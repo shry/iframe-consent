@@ -25,7 +25,7 @@
 
         main {
             max-width: 600px;
-            padding: 15px;
+            padding: 15px 15px 30px 15px;
         }
         :root {
             --iframe-consent-wrapper-radius:var(--bs-border-radius);
@@ -33,6 +33,7 @@
             --iframe-consent-btn-border:1px solid var(--bs-primary);
             --iframe-consent-btn-radius:var(--bs-border-radius);
             --iframe-consent-btn-font-family:var(--bs-font-sans-serif);
+            --iframe-consent-btn-font-size:1rem;
         }
 
     </style>
@@ -43,7 +44,7 @@
     <main class="w-100 m-auto text-center ">
         <h1 class="mb-4">&lt;iframe-consent /&gt;</h1>
         <p class="lead">iframe-consent is GDPR conform drop-in replacement for the HTML &lt;iframe /&gt; tag.</p>
-        <h3>Example:</h3>
+        <h3 class="mt-5">Example:</h3>
 
 
         <div class="card text-bg-dark my-4">
@@ -55,9 +56,9 @@
                         &lt;/iframe-consent&gt;
                 </code>
             </div>
-          </div>
+        </div>
 
-
+        <h3 class="mb-4 mt-5">Output:</h3>
 
         <iframe-consent responsive icon="auto" width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             <p>Provide a privacy text for the user</p>

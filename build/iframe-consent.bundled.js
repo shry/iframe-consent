@@ -141,6 +141,7 @@ const ot=1;class nt{constructor(t){}get _$AU(){return this._$AM._$AU}_$AT(t,i,s)
       padding:var(--iframe-consent-btn-padding, 0.75rem 2rem);
       font-weight:var(--iframe-consent-btn-font-weight);      
       font-family:var(--iframe-consent-btn-font-family);
+      font-size:var(--iframe-consent-btn-font-size, 1rem);
     }
 
     img.poster {
