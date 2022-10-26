@@ -27,6 +27,7 @@ const icons = {
  * @cssprop --iframe-consent-btn-font-family - Button font family
  * @cssprop --iframe-consent-btn-font-size - Button font size
  * @cssprop --iframe-consent-poster-opacity - Poster image opacity
+ * @cssprop --iframe-consent-poster-filter - Poster image filter for blur etc.
  * @cssprop --iframe-consent-icon-color - Icon color
  */
 @customElement('iframe-consent')
@@ -94,6 +95,12 @@ export class IframeConsent extends LitElement {
       font-size:var(--iframe-consent-btn-font-size, 1rem);
     }
 
+    button:hover  {
+      background:var(--iframe-consent-btn-hover-bg, black);
+      color:var(--iframe-consent-btn-hover-color, white);
+      border-color:var(--iframe-consent-btn-hover-border-color, black);
+    }
+
     img.poster {
       position:absolute;
       top:0;
@@ -103,7 +110,8 @@ export class IframeConsent extends LitElement {
       width:100%;
       height:100%;
       object-fit:cover;
-      opacity:var(--iframe-consent-poster-opacity, 0.2)
+      opacity:var(--iframe-consent-poster-opacity, 0.2);
+      filter: var(--iframe-consent-poster-filter);
     }
 
     svg {

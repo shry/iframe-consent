@@ -2,6 +2,7 @@
 /lib/
 /test/
 custom-elements.json
+test.jpg
 # top level source
 iframe-consent.js
 iframe-consent.js.map

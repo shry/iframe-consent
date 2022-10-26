@@ -13,6 +13,7 @@
       :root {
         --iframe-consent-btn-bg:var(--blue);
         --iframe-consent-wrapper-radius:5px;
+        --iframe-consent-poster-filter:blur(10px);
       }
       .wrapper {
         display:flex;
@@ -31,7 +32,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6">
-          <iframe-consent accept="Akzeptieren" icon="auto" responsive width="560" height="315" src="https://www.youtube-nocookie.com/embed/I5e6ftNpGsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          <iframe-consent accept="Akzeptieren" icon="auto" responsive poster="test.jpg" width="560" height="315" src="https://www.youtube-nocookie.com/embed/I5e6ftNpGsU?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             <p>Lorem ipsum dolor sit amet</p>
             <p><a href="#">Privacy policy</a></p>
           </iframe-consent>

@@ -38,23 +38,27 @@ In addition iframe-consent has some useful exta attributes:
 
 You can change the style of the iframe-consent with CSS variables:
 
-| Variable 	                             | Default value  		|
-|---	                                 |---		            |
-| --iframe-consent-wrapper-bg  	         | #eee                 |
-| --iframe-consent-wrapper-radius        | -                    |
-| --iframe-consent-wrapper-border 	     | 1px solid #ccc	    |
-| --iframe-consent-wrapper-iframe-border | 1px solid transparent|
-| --iframe-consent-btn-border            | 1px solid black      |
-| --iframe-consent-btn-color             | white                |
-| --iframe-consent-btn-bg                | black                |
-| --iframe-consent-btn-radius            | 5px                  |
-| --iframe-consent-btn-padding           | 0.75rem 2rem         |
-| --iframe-consent-btn-font-weight       | -                    |
-| --iframe-consent-btn-font-family       | -                    |
-| --iframe-consent-btn-font-size         | 1rem                 |
-| --iframe-consent-poster-opacity        | 0.2                  |
-| --iframe-consent-icon-color            | -                    |
-| --iframe-consent-wrapper-mobile-bg     | white                |
+| Variable 	                              | Default value  		 |
+|---	                                  |---		             |
+| --iframe-consent-wrapper-bg  	          | #eee                 |
+| --iframe-consent-wrapper-radius         | -                    |
+| --iframe-consent-wrapper-border 	      | 1px solid #ccc	     |
+| --iframe-consent-wrapper-iframe-border  | 1px solid transparent|
+| --iframe-consent-btn-border             | 1px solid black      |
+| --iframe-consent-btn-color              | white                |
+| --iframe-consent-btn-bg                 | black                |
+| --iframe-consent-btn-radius             | 5px                  |
+| --iframe-consent-btn-padding            | 0.75rem 2rem         |
+| --iframe-consent-btn-font-weight        | -                    |
+| --iframe-consent-btn-font-family        | -                    |
+| --iframe-consent-btn-font-size          | 1rem                 |
+| --iframe-consent-btn-hover-color        | white                |
+| --iframe-consent-btn-hover-bg           | black                |
+| --iframe-consent-btn-hover-border-color | black                |
+| --iframe-consent-poster-opacity         | 0.2                  |
+| --iframe-consent-poster-filter          | -                    |
+| --iframe-consent-icon-color             | -                    |
+| --iframe-consent-wrapper-mobile-bg      | white                |
 
 ### Bootstrap
 
