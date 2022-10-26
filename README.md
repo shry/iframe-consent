@@ -71,6 +71,8 @@ If you are using Bootstrap v5 you can quickly adapt some basic styling by using 
     --iframe-consent-btn-border:1px solid var(--bs-primary);
     --iframe-consent-btn-radius:var(--bs-border-radius);
     --iframe-consent-btn-font-family:var(--bs-font-sans-serif);
+    --iframe-consent-btn-hover-bg: var(--bs-link-hover-color);
+    --iframe-consent-btn-hover-border-color: var(--bs-link-hover-color);
 }
 ```
 
