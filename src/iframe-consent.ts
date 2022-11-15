@@ -262,7 +262,7 @@ export class IframeConsent extends LitElement {
 
       return this.responsive ? {paddingBottom: `${(height / width)*100}%`} : {width: `${width}px`, height: `${height}px`};
     } 
-    
+
     return {paddingBottom: '56.25%'};
   }
 
@@ -273,7 +273,7 @@ export class IframeConsent extends LitElement {
       return {width: `${this.width}`, height: `${this.height}`}
     }
 
-    return {width: !this.responsive && this.width ? `${this.width}px` : 'auto'}
+    return {width: !this.responsive && this.width ? `${parseInt(this.width,10)}px` : 'auto'}
 
   }
 
