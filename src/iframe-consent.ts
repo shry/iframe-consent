@@ -119,7 +119,10 @@ export class IframeConsent extends LitElement {
     }
 
     @media only screen and (max-width: 480px) {
-
+      .wrapper-consent {
+        display:flex;
+        flex-direction:column;
+      }
       .consent-overlay {
         border-top:var(--iframe-consent-wrapper-border, 1px solid #ccc);
         position:static;
@@ -173,7 +176,7 @@ export class IframeConsent extends LitElement {
    * @attr
    */
   @property()
-  width?:number;
+  width?:string;
 
 
   /**
@@ -181,7 +184,7 @@ export class IframeConsent extends LitElement {
    * @attr
    */
   @property()
-  height?:number;
+  height?:string;
 
   /**
    * The iframe name.
@@ -248,18 +251,31 @@ export class IframeConsent extends LitElement {
   consent = false;
  
 
-  /**
-   *  Calculates the height of the wrapper
-   * 
-   * @returns string
-   */
   private _getStyle(): { paddingBottom?: string; width?: string; height?: string; } {
     if(this.height && this.width){
-      return this.responsive ? {paddingBottom: `${(this.height / this.width)*100}%`} : {width: `${this.width}px`, height: `${this.height}px`};
+      if(this.height.endsWith('%') && this.width.endsWith('%')){
+        return {width: `${this.width}`, height: `${this.height}`}
+      }
+
+      const width = parseInt(this.width, 10);
+      const height = parseInt(this.height, 10);
+
+      return this.responsive ? {paddingBottom: `${(height / width)*100}%`} : {width: `${width}px`, height: `${height}px`};
     } 
+    
     return {paddingBottom: '56.25%'};
   }
 
+
+  private _getConsentStyle(): {  width: string; height?:string;  } {
+
+    if(this.height?.endsWith('%') && this.width?.endsWith('%')){
+      return {width: `${this.width}`, height: `${this.height}`}
+    }
+
+    return {width: !this.responsive && this.width ? `${this.width}px` : 'auto'}
+
+  }
 
   /**
    * Button click for consent
@@ -339,7 +355,7 @@ export class IframeConsent extends LitElement {
     }
 
     return html`
-      <div class="wrapper-consent" style=${styleMap({width: !this.responsive && this.width ? `${this.width}px` : 'auto'})}>
+      <div class="wrapper-consent" style=${styleMap(this._getConsentStyle())}>
         <div id="wrapper" style=${styleMap(this._getStyle())}>
           ${this._getPoster()}
           ${this._getIcon('consent-icon-mobile')}
